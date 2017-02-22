@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="motoTabsApp">
+<head>
+	<title>Widget tabs</title>
+	<meta charset="UTF-8">
+	
+	<!-- build:css css/vendor.min.css -->
+	<link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"></link>
+	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+	<!-- endbuild -->
+
+	<!-- build:css css/main.min.css -->
+	<link rel="stylesheet" href="app/css/main.css">
+	<!-- endbuild -->
+
+</head>
+<body ng-cloak>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Simple tabs</h3>
+				<moto-tabs>
+					<moto-tab-item title="Title 1">
+						Content1
+					</moto-tab-item>
+					<moto-tab-item title="Title 2">
+						Content2
+					</moto-tab-item>
+					<moto-tab-item title="Title 3">
+						Content3
+					</moto-tab-item>
+				</moto-tabs>
+
+			</div>
+			<div class="col-md-6">
+				<h3>Tabs with config 'active'</h3>
+				<moto-tabs active="2">
+					<moto-tab-item title="Title 1">
+						Content1
+					</moto-tab-item>
+					<moto-tab-item title="Title 2">
+						Content2
+					</moto-tab-item>
+					<moto-tab-item title="Title 3">
+						Content3
+					</moto-tab-item>
+				</moto-tabs>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Simple tabs</h3>
+				<p>With nesting</p>
+				<moto-tabs>
+					<moto-tab-item title="Title 1">
+						Content1
+
+						<moto-tabs active='0'>
+							<moto-tab-item title="Title 1">
+								Content1
+							</moto-tab-item>
+							<moto-tab-item title="Title 2">
+								Content2
+							</moto-tab-item>
+						</moto-tabs>
+
+					</moto-tab-item>
+					<moto-tab-item title="Title 2">
+						Content2
+					</moto-tab-item>
+					<moto-tab-item title="Title 3">
+						Content3
+					</moto-tab-item>
+				</moto-tabs>
+
+			</div>
+			<div class="col-md-6">
+				<h3>Tabs with config 'active'</h3>
+				<p>With nesting</p>
+				<moto-tabs active="2">
+					<moto-tab-item title="Title 1">
+						Content1
+					</moto-tab-item>
+					<moto-tab-item title="Title 2">
+						Content2
+					</moto-tab-item>
+					<moto-tab-item title="Title 3">
+						Content3
+
+						<moto-tabs>
+							<moto-tab-item title="Title 1">
+								Content1
+							</moto-tab-item>
+							<moto-tab-item title="Title 2">
+								Content2
+							</moto-tab-item>
+						</moto-tabs>
+
+					</moto-tab-item>
+				</moto-tabs>
+
+			</div>
+		</div>
+
+		<div class="col-md-6 col-md-offset-3">
+			<h3>Variant 2</h3>
+			<div moto-tabs active="1">
+
+				<article moto-tab-item>
+					<title>
+						<img src="app/images/new-google-favicon-512.png" width="18" height="18">
+						My excellent title 1
+					</title>
+					<content>
+						My excellent content 1
+					</content>
+				</article>
+
+				<article moto-tab-item>
+					<title>
+						My excellent title 2
+					</title>
+					<content>
+						My excellent content 2
+					</content>
+				</article>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- build:js js/vendor.min.js -->
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js js/main.min.js -->
+	<script type="text/javascript" src="app/js/app.js"></script>
+	<script type="text/javascript" src="app/js/directives/motoTabsDirective.js"></script>
+	<script type="text/javascript" src="app/js/directives/motoTabItemDirective.js"></script>
+	<script type="text/javascript" src="app/js/components/motoTabsComponent.js"></script>
+	<script type="text/javascript" src="app/js/components/motoTabItemComponent.js"></script>
+	<!-- endbuild -->
+
+</body>
+</html>
